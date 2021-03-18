@@ -1,0 +1,16 @@
+1. uzdevums
+Moduļa uzdevums ir aprēķināt algu atbilstoši ievadītajai likmei un nostrādātajām stundām. 
+Tāpat kā 1. prakstiskajā darbā tika saglabāti jau iepriekš uzrakstītie while cikli, kas pārbauda, 
+vai ievadītās vērtības ir skaitļi. 
+Atbilstoši uzdevuma nosacījumiem, algas aprēķins ir iekļauts funkcijā compute_salary, kas pieņem divas vērtības - 
+nostrādātās stundas un likmi. Funkcija rezultātā atgriež aprēķināto algas vērtīgu, kas moduļa beigās tiek izvadīta 
+konsolē ar Python iebūvēto print() funkciju.
+Moduļa testēšana joprojām tiek veikta manuāli - vairākkārtīgi palaižot skriptu un pārbaudot, vai ievadītās vērtības atgriež paredzēto rezultātu.
+
+2. uzdevums
+Moduļa uzdevums ir konsolē uzzīmēt četrstūri ar nošķeltiem stūriem, kura vidū ir kvadrāts.
+Uzdevuma veikšajai izveidota funkcija draw_rectagle, kas sastāv no ārējā for cikla, kas skaita rindas. Tā iekšpusē ir vēl viens for cikls, 
+kas nosaka elementa indeksu rindā. Atbilstoši if...else nosacījumiem un elementa indeksam, tukšajā rindā tiek ierakstīts vai nu * simbols,
+vai atstarpe. Katra iekšējā cikla beigās konsolē tiek izdrukāta konstruētā rinda, to centrējot atbilstoši noteiktajam rindas garumam.
+Modulis manuāli testēts ar citām asterix_count vērtībām, kas iekļaujas aritmētiskajā progresijā (20, 32, 44, 56, 68, 80), 
+atbilstoši izmantojot kopējo shēmu ar 6 rindām un 4 atstarpju kubu zīmējuma vidū.
