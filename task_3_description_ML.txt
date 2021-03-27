@@ -1,0 +1,13 @@
+Lai izslēgtu pirmo rindu, tiek izmantota funkcija readline().
+Ar rstrip() funkciju katrai rindai tiek noņemts jaunas rindas simbols.
+Tā kā reitings ir .csv faila pēdējais rindas elements, tas tiek atlasīts 
+kā rindas simbolu virkne starp pēdējā ',' indeksu (to neieskaitot), ko nosaka ar rfind() funkciju, 
+un pēdējo rindas indeksu, ko nosaka ar len() funkciju.
+Lai atlasītu pārslu nosaukumu, tiek izmantota if...else izteiksme. Ja rinda sākas ar dubultajām pēdiņām ("),
+tad tā ar split() funkciju tiek sadalīta, izmantojot dubultās pēdiņas un atlasot simbolu virkni ar indeksu 1.
+Šī metoda tiek izmantota, jo šajā gadījumā nosaukumā tiek izmantoti komati, tāpēc nav iespējams veikt rindas
+sadalīšanu pēc komantiem, kā tas tiek darīts gadījumos, kad rinda nesākas ar dubultajām pēdiņām,- 
+kad rindas sadalīšana teik veikta izmantojot komatu, simbolu virkne tiek atlasīta ar indeksu 0.
+
+Uzdevumā ar Regex
+Izdrukājot konsolē pārslu nosaukumu, tajā ar sub() metodi '_' tiek aizstātas ar atstarpi.
