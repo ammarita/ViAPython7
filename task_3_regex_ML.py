@@ -8,14 +8,8 @@ cereals.readline()
 
 for line in cereals:
     line = line.rstrip()
-
-    if line.startswith('"'):
-        title += str(line.split('"')[1]) + ' '
-    else:
-        title += str(line.split(',')[0]) + ' '
-
-    last_comma = line.rfind(',')
-    ratings += line[last_comma + 1 : len(line)] + ' '
+    title += re.match('(.*?)(?=")|^.+?(?=,)',line).group() + ' '
+    ratings += re.match('/[^,]+$/',line).group() + ' '
 
 cereals.close()
 
