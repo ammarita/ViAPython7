@@ -9,5 +9,11 @@ tad tā ar split() funkciju tiek sadalīta, izmantojot dubultās pēdiņas un at
 sadalīšanu pēc komantiem, kā tas tiek darīts gadījumos, kad rinda nesākas ar dubultajām pēdiņām,- 
 kad rindas sadalīšana teik veikta izmantojot komatu, simbolu virkne tiek atlasīta ar indeksu 0.
 
-Uzdevumā ar Regex
+Ar Regex:
+Lai atlasītu pārslu nosaukumu, tiek izmantota Regex metode match() ar diviem šabloniem - viens, lai 
+atlasītu pārslu nosaukumus, kas ietverti dubultajās pēdiņās, otrs - lai atlasītu pārsku nosaukumus, kas 
+atlasa simbolu virkni līdz pirmajam komatam.
+Lai atlasītu reitingus, tiek izmantota Regex metode search(), jo tā meklēšanu veic visā simbolu rindā 
+(atšķirībā no match(), kas meklēšanu veic rindas sākumā), šajā gadījumā norādot, ka nepieciešams 
+atrast simbolu virkni, kas atrodas aiz pēdējā komata.
 Izdrukājot konsolē pārslu nosaukumu, tajā ar sub() metodi '_' tiek aizstātas ar atstarpi.

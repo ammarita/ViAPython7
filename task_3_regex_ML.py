@@ -9,7 +9,7 @@ cereals.readline()
 for line in cereals:
     line = line.rstrip()
     title += re.match('(.*?)(?=")|^.+?(?=,)',line).group() + ' '
-    ratings += re.match('/[^,]+$/',line).group() + ' '
+    ratings += re.search('[^,]+$',line).group() + ' '
 
 cereals.close()
 
