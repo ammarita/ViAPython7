@@ -1,7 +1,8 @@
 ratings = ''
 title = ''
+line_count = 0
 
-cereals = open('cereals.csv', 'r')
+cereals = open('C:/Users/marit/Downloads/ViA/ViAPython7/cereals.csv', 'r')
 cereals.readline()
 
 for line in cereals:
@@ -14,6 +15,7 @@ for line in cereals:
 
     last_comma = line.rfind(',')
     ratings += line[last_comma + 1 : len(line)] + ' '
+    line_count += 1
 
 cereals.close()
 
@@ -24,7 +26,7 @@ i = 0
 min_index = 0
 max_index = 0
 
-while i < 16:
+while i < line_count:
     rating_to_check = float(ratings.split(' ')[i])
 
     if(rating_to_check < min_rating):
@@ -39,7 +41,7 @@ while i < 16:
 
     i += 1
 
-mean_rating /= 15
+mean_rating /= line_count
 
 print('The lowest cereals rating value: ' + str(min_rating) + ' Cereals name: ' + title.split(' ')[min_index])
 print('The average cereals rating value: ' + str(mean_rating))
