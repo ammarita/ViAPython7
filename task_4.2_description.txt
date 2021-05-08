@@ -1,0 +1,9 @@
+Programma sagaida, kad lietotājs ievadīts faila nosaukumu, un mēģina šo failu atvērt. Ja failu neizdodas atvērt, 
+programma izdrukā kļūdas ziņojumu un beidz darbu.
+Ja failu izdodas atvērt, programma lasa faila saturu rindu pa rindai un meklē rindas, kas sākas ar "From ".
+Šīs rindas ar split() funkciju tiek sadalītas vārdos. No šī vārdu saraksta tiek izvēlēts e-pasts, kas sarakstā tiek atrasts, izmantojot indeksu 1.
+E-pasts atkal tiek sadalīts sarakstā, izmantojot "@" simbolu, bet elements no šī jaunā saraksta ar indeksu 1 tiek pievienots
+domēnu sarakstam, izmantojot funkciju append().
+Katrs elements no domēnu saraksta tiek ievietots domēnu vārdnīcā - ja konkrētais elements tajā vēl nav atrodams, tam tiek piešķirts vērtība 1, 
+kas ar katru jaunu ievietošanas reizi tiek palielināta par 1.
+Rezultātā tiek izdrukāta domēnu vārdnīca, kas parāda, cik reizes katrs domēns ir parādījies ievadītajā failā.
