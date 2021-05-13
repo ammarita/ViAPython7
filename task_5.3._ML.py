@@ -48,7 +48,9 @@ while True:
         except:
             country_code = 'None'
             pass
-        print('Place name:', name, '\nType of the place:', type, '\nCountry:', country_name, '(',country_code.upper(),')')
+        print('You searched a place with coordinates: latitude -', lat, 'longitude -', lon, 
+        '\nPlace name:', name, '\nType of the place:', type, '\nCountry:', country_name, 
+        '(',country_code.upper(),')')
 
     while True:
         repeat = input('Repeat (Y/N)?')
