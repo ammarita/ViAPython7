@@ -1,0 +1,7 @@
+Programma izmanto Nominatim meklētāju, lai atbilstoši ievadītajām koordinātām atrastu vietu uz kartes.
+Tajā while ciklā lietotājam jāievada koordinātu garums un platums. Ievadītie dati tiek izmantoti, lai izveidotu Nominatim pieprasījuma saiti.
+Atbildē tiek sagaidīti dati json formātā, kas tiek nolasīti un atkodēti.
+If blokā tiek pārbaudīts vai saņemtajos datos ir vārds 'features'. Ja tā nav, tas nozīmē, ka saņemtā atbilde ir kļūdaina (piem., nepareizi ievadītas koordinātas). Šajā gadījumā tiek izdrukāts kļūdas ziņojums, bet lietotājam tiek piedāvāts no jauna ievadīt koordinātas.
+Ja 'features' ir atrasts saņemtajos datos, else zarā tiek meklētas šādas vērtības - nosaukums (name), tips (type), valsts (country_name) un valsts kods (cauntry_code). Katrai vērtībai tiek norādīts ceļš tās atrašanai json objektā. Ja kāda no vērtībām nav atrodama json objektā, except zarā tā tiek iestatīta kā 'None' (piemēram, koordinātu sākumpunkts lat=0, lon=0 atrodas okeānā un nepieder nevienai valstij, tāpēc json objektā šis lauks nav atrodams), bet ar pass programmas izpilde tiek turpināta.
+Pēc visu vērtību atrašanas tās tiek izdrukātas terminālī. 
+Pēc izdrukas vēl vienā while ciklā lietotjāma tiek piedāvāta izvēle vai nu ievadīt jaunas koordinātu vērtības, vai iziet no programmas.
